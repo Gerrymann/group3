@@ -1,0 +1,35 @@
+<!doctype html>{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+    <link rel="stylesheet" href="{% static 'filmy/style.css' %}">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+<main class="container">
+    <h1>SEZNAM</h1>
+
+
+    {% include 'filmy/search_form.html' %}
+
+
+    <ul>
+
+        {% for slug, data in filmy_data.items %}
+        <li>
+            <a href="{% url 'filmy:detail' slug=slug %}">{{ data.nazev }}</a>
+        </li>
+
+        {% endfor %}
+
+    </ul>
+
+</main>
+
+
+
+</body>
+</html>

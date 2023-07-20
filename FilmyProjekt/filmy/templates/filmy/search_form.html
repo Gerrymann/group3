@@ -1,0 +1,7 @@
+ <form method="GET" action="{% url  'filmy:seznam' %}">
+     <input type="search" name="text" value="{{ request.GET.text }}"
+        autocomplete=off
+        spellcheck="false"
+        minlength="0"
+        autofocus>
+ </form>
