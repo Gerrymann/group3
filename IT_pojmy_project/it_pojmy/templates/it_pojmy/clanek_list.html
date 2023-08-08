@@ -1,0 +1,21 @@
+{% extends 'it_pojmy/layout.html' %}
+
+{% block main_content %}
+  <h1>{% block title %}Články na našem webu{% endblock %}</h1>
+
+  <ul>
+    {% for clanek in clanky %}
+      <li>
+        <a href="{% url 'it_pojmy:detail_clanku' slug_url=clanek.slug %}">
+          {{ clanek.nazev }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+
+  <div>{{ is_paginated }}</div>
+<div>
+  {% for number in paginator.get_elided_page_range %}
+    <a href="?page={{ number }}">{{ number }} </a>
+  {% endfor %}
+</div>
+{% endblock %}

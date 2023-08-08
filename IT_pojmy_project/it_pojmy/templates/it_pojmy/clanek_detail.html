@@ -1,0 +1,36 @@
+{% extends 'it_pojmy/layout.html' %}
+
+{% block main_content %}
+  <h1>{% block title %}{{ clanek.nazev }}{% endblock %}</h1>
+  <p>{{ clanek.kategorie }}</p>
+  <p>{{ clanek.popis }}</p>
+
+  {% for komentar in clanek.komentare_clanku.all %}
+    <blockquote>
+      {{ komentar.obsah }}
+      <footer>
+        <cite>- {{ komentar.autor }}</cite>
+      </footer>
+    </blockquote>
+  {% endfor %}
+
+  <br>
+
+  <h4>Přidat nový komentář</h4>
+
+  <form action="{% url 'it_pojmy:novy_komentar' %}" method="POST">
+    {% csrf_token %}
+    <input type="hidden" value="{{ clanek.id }}" name="clanek_id">
+
+    <label> Autor
+      <input type="text" name="autor">
+    </label>
+
+    <label>
+      Text komentáře
+      <textarea name="obsah"></textarea>
+    </label>
+    <input style="width: unset;" type="submit" value="Odeslat">
+  </form>
+
+{% endblock %}

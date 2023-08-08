@@ -1,0 +1,12 @@
+{% extends 'it_pojmy/layout.html' %}
+
+{% block main_content %}
+  <h1>{% block title %}Vytvořit nový článek{% endblock %}</h1>
+
+  <form action="" method="POST">
+    {% csrf_token %}
+    {{ form }}
+    <input type="submit" value="Odeslat">
+  </form>
+
+{% endblock %}
