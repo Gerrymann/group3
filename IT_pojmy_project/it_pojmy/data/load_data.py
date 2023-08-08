@@ -1,11 +1,9 @@
 
-
 import json
 import os, django
-os.environ.setdefault("DJANGO_SETTINGS_MODULE", "_project_settings")
+
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "_project.settings")
 django.setup()
-
-
 
 from it_pojmy.models import ItPojem
 
