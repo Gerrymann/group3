@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Kategorie</title>
+</head>
+<body>
+    {% block main_content %}
+      <h1>{% block title %}KATEGORIE{% endblock %}</h1>
+
+      <ul>
+        {% for item in all_kategorie %}
+          <li>
+            <div>{{ item.nazev }}</div>
+          </li>
+        {% endfor %}
+      </ul>
+    {% endblock %}
+
+</body>
+</html>
