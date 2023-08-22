@@ -1,22 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Kategorie</title>
-</head>
-<body>
-    {% block main_content %}
-      <h1>{% block title %}KATEGORIE{% endblock %}</h1>
+{% extends 'eshop/_layout.html' %}
 
-      <ul>
-        {% for item in all_kategorie %}
-          <li>
-            <div>{{ item.nazev }}</div>
-          </li>
+{% block eshop_content %}
+<h1 title="Kategorie">Kategorie</h1>
+
+<aside class="menu">
+    <p class="menu-label">Kategorie</p>
+    <ul class="-menu-list">
+        {% for item in object_list %}
+        <li>
+            <a href="{{ item.get_absolute_url }}">{{ item.nazev }}</a>
+        </li>
         {% endfor %}
-      </ul>
-    {% endblock %}
+    </ul>
+</aside>
 
-</body>
-</html>
+{% endblock %}

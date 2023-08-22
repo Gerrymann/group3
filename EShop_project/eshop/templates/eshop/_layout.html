@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>E-SHOP</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+</head>
+<body>
+
+{% include 'eshop/include/nav.html' %}
+
+<section class="section">
+    <div class="container">
+        <div class="columns">
+            <div class="column is-narrow"><!-- Boční panel -->
+
+                <aside class="menu">
+                    <p class="menu-label">Kategorie</p>
+                    <ul class="menu-list">
+                        {% for KAT in KATEGORIE %}
+                            {% if not KAT.nadkategorie %}
+                                <li>
+                                    <a {% if KAT == kategorie %}class="is-active"{% endif %} href="{{ KAT.get_absolute_url }}">{{ KAT.nazev }}</a>
+                                    <ul>
+                                        {% for PODKAT in KAT.podkategorie.all %}
+                                            <li><a {% if PODKAT == kategorie %}class="is-active"{% endif %} href="{{ PODKAT.get_absolute_url }}">{{ PODKAT.nazev }}</a></li>
+                                        {% endfor %}
+                                    </ul>
+                                </li>
+                            {% endif %}
+                        {% endfor %}
+                    </ul>
+
+                    <p class="menu-label">Značky</p>
+                    <ul class="menu-list">
+                        {% for ZNACKA in ZNACKY %}
+                            <li><a href="{{ ZNACKA.get_absolute_url }}">{{ ZNACKA.nazev }}</a></li>
+                        {% endfor %}
+                    </ul>
+                </aside>
+
+            </div><!-- END Boční panel -->
+            <div class="column">
+                {% block eshop_content %}
+                {% endblock %}
+            </div>
+        </div>
+    </div>
+</section>
+</body>
+</html>

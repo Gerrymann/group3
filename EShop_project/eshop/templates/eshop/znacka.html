@@ -1,0 +1,10 @@
+{% extends 'eshop/_layout.html' %}
+
+{% block eshop_content %}
+    <h1 class="title">{{ znacka.nazev }}</h1>
+    {% for produkt in produkty %}
+    <a href="{{ produkt.get_absolute_url }}">
+        <div>{{ produkt.nazev }}</div>
+    </a>
+    {% endfor  %}
+{% endblock %}

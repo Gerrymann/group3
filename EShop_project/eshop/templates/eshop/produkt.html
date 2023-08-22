@@ -1,0 +1,27 @@
+{% extends 'eshop/_layout.html' %}
+
+{% block eshop_content %}
+
+
+
+<h1 class="title">{{ produkt.nazev }}</h1>
+<div class="card">
+    <div>
+        <a href="#">{{ produkt.kategorie }}</a>
+    </div>
+    <div>
+        <a href="#">{{ produkt.znacka.nazev }}</a>
+    </div>
+    <br>
+    <p style="font-size:1.2em;">{{ produkt.popis }}</p>
+    <br>
+    <span style="font-size: 1.7em; text-align: left">Cena: {{ produkt.aktualni_cena }} Kč s DPH</span>
+    <p>Na skladě: {{ produkt.mnozstvi }}</p>
+    <br><br>
+    <button class="button is-full is-warning">Přidat do košíku</button>
+    <button class="button is-full is-primary">Koupit hned</button>
+
+
+</div>
+
+{% endblock %}

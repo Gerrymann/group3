@@ -1,0 +1,17 @@
+1. index
+/
+
+2. seznam kategorii
+/kategorie/
+
+3. detail kategorie
+/elektronika/ -> <slug:slug>/
+/potraviny/   -> <slug:slug>/
+
+4. znacka
+/znacka/apple/ -> znacka/<slug:slug>/
+/znacka/nokia/ -> znacka/<slug:slug>/
+
+5. detail produktu
+/p/apple-iphone-14/12/ -> p/<slug:slug>/int:pk/
+/p/coca-cola-2l/100/    -> p/<slug:slug>/<int:pk>/

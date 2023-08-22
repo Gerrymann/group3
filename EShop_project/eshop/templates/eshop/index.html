@@ -1,0 +1,10 @@
+{% extends 'eshop/_layout.html' %}
+
+{% block eshop_content %}
+    <h1 class="title">INDEX</h1>
+
+
+    {% for kat in kategorie %}
+    <div>{{ kat }}</div>
+    {% endfor  %}
+{% endblock %}

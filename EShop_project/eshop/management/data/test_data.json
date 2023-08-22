@@ -1,0 +1,109 @@
+{
+  "produkty": [
+    {
+      "značka": "Apple",
+      "kategorie": "Kamery",
+      "název": "iCam Pro X"
+    },
+    {
+      "značka": "Samsung",
+      "kategorie": "Fotoaparáty",
+      "název": "GalaxySnap 5K"
+    },
+    {
+      "značka": "Sony",
+      "kategorie": "Televize",
+      "název": "BraviaVision 75"
+    },
+    {
+      "značka": "LG",
+      "kategorie": "Komponenty",
+      "název": "UltraGear GPU Pro"
+    },
+    {
+      "značka": "Panasonic",
+      "kategorie": "Monitory",
+      "název": "LumiView 27"
+    },
+    {
+      "značka": "Microsoft",
+      "kategorie": "Notebooky",
+      "název": "SurfaceBook Pro 15"
+    },
+    {
+      "značka": "Dell",
+      "kategorie": "Počítače",
+      "název": "XPS Tower Plus"
+    },
+    {
+      "značka": "HP (Hewlett-Packard)",
+      "kategorie": "Chytré hodinky",
+      "název": "HP WatchFit Elite"
+    },
+    {
+      "značka": "Lenovo",
+      "kategorie": "Mobilní telefony",
+      "název": "Lenovo FlexPhone"
+    },
+    {
+      "značka": "Asus",
+      "kategorie": "Elektronika",
+      "název": "ZenWave SoundBar"
+    },
+    {
+      "značka": "Acer",
+      "kategorie": "Televize",
+      "název": "AcerVision 50"
+    },
+    {
+      "značka": "Apple",
+      "kategorie": "Monitory",
+      "název": "iDisplay Pro 32"
+    },
+    {
+      "značka": "Samsung",
+      "kategorie": "Notebooky",
+      "název": "GalaxyBook Air 13"
+    },
+    {
+      "značka": "Sony",
+      "kategorie": "Komponenty",
+      "název": "XperiaBoost CPU"
+    },
+    {
+      "značka": "LG",
+      "kategorie": "Chytré hodinky",
+      "název": "LG TimeSync Elite"
+    },
+    {
+      "značka": "Panasonic",
+      "kategorie": "Mobilní telefony",
+      "název": "PanaCall Pro 20"
+    },
+    {
+      "značka": "Microsoft",
+      "kategorie": "Televize",
+      "název": "SurfaceScreen 55"
+    },
+    {
+      "značka": "Dell",
+      "kategorie": "Elektronika",
+      "název": "DellStream Media Player"
+    },
+    {
+      "značka": "HP (Hewlett-Packard)",
+      "kategorie": "Fotoaparáty",
+      "název": "HP SnapLens 10"
+    },
+    {
+      "značka": "Lenovo",
+      "kategorie": "Počítače",
+      "název": "Lenovo ThinkDesk 800"
+    },
+    {
+      "značka": "Asus",
+      "kategorie": "Kamery",
+      "název": "AsusCam Vision 4"
+    }
+  ]
+}
